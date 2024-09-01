@@ -594,8 +594,9 @@ span{
 .container {
     position: relative;
     width: 100%;
-    height: auto; /* Flexible height */
+    height: 100vh; /* Flexible height */
     padding: 30px 10%;
+   
 }
 
 /* Main title styling */
@@ -642,11 +643,12 @@ span{
     justify-content: space-between;
     margin-top: 70px; /* Space above the row */
     gap: 10px; /* Reduce gap between columns */
+    margin-bottom: 0%;
 }
 .row .col {
     flex: 1;
     min-width: 0; /* Ensure columns do not shrink too much */
-    margin-bottom: 10px; /* Reduced bottom margin */
+    margin-bottom: 5px; /* Reduced bottom margin */
 }
 
 /* Skill subject styling */
@@ -870,6 +872,7 @@ span{
 #contact {
     max-width: 800px;
     margin: 0 auto;
+    height: 100vh;
     /* padding: 20px; */
     background-color: var(--bg-color);
     border-radius: 10px;
