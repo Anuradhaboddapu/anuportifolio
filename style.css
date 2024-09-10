@@ -834,6 +834,8 @@ span{
 
 #portfolio .portfolio-item:hover {
     transform: scale(1.05);
+    
+  
 }
 
 /* Overlay with buttons specific to the portfolio */
