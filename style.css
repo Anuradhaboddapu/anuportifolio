@@ -751,13 +751,13 @@ span{
         margin-bottom: 4px; /* Minimal bottom margin */
     }
     .subject {
-        font-size: 16px; /* Adjust font size for smaller screens */
+        font-size: 8px; /* Adjust font size for smaller screens */
     }
     .progress-bar {
         height: 4px; /* Adjust height for smaller screens */
     }
     .progress-bar::after {
-        font-size: 10px; /* Adjust font size for progress label */
+        font-size: 8px; /* Adjust font size for progress label */
     }
     .progress-line::after {
         width: 10px; /* Adjust dot size */
