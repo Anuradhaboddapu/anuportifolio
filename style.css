@@ -11,12 +11,12 @@
     font-family: 'Poppins', sans-serif;
 }
 :root {
-    --bg-color: #fdfdfd;
-    --text-color: #333;
-    --main-color: #754ef9;
-    --white-color: #fdfdfd;
-    --shadow-color: rgba(0,0,0,.2);
-}
+    --bg-color: #f4f6f8;               /* Light, cool-toned background */
+    --text-color: #1a1a1a;             /* Deep charcoal for clear readability */
+    --main-color: #00b894;             /* Elegant teal – fresh and professional */
+    --white-color: #ffffff;            /* Crisp white for sections/cards */
+    --shadow-color: rgba(0, 0, 0, 0.06); /* Light shadow for subtle elevation */
+  }
 html{
     font-size: 62.5%;
 }
@@ -403,189 +403,72 @@ span{
 
 
 #academics {
-    padding: 50px 0;
-    background-color: var(--bg-color); /* Dark Background */
-}
-
-.section-title {
+    padding: 60px 20px;
+    background-color: var(--bg-color);
+  }
+  
+  .section-title {
     text-align: center;
-    font-size: 3.8rem;
+    font-size: 3rem;
     color: var(--text-color);
-    margin-bottom: 30px;
-
-}
-
-.timeline {
+    margin-bottom: 40px;
+  }
+  
+  .academics-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    margin: 0 auto;
-    width: 90%;
-    padding-top: 40px;
-   
-}
-
-.timeline-item {
-    position: relative;
-    width: 30%;
-    text-align: center;
-    margin: 20px;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 2px;
-    background-color: var(--main-color);
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-}
-
-.timeline-icon {
-    background-color: var(--main-color);
-    border-radius: 50%;
-    color: var(--text-color);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 0 auto 15px;
-    size: 2.4rem;
-}
-
-.timeline-content {
-    background-color:var(--bg-color);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px var(--main-color);
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .academic-card {
+    background-color: var(--white-color);
     color: var(--text-color);
-    margin-top: 20px;
-    position: relative;
-    top: -20px;
-}
-
-.timeline-content .date {
-    background-color: var(--main-color);
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: var(--text-color);
-    margin-bottom: 10px;
-    display: inline-block;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.timeline-content h3 {
-    font-size: 2.2rem;
-    margin: 10px 0;
-}
-
-.timeline-content p {
-    font-size: 1.2rem;
-}
-
-/* Styling the connector lines */
-.timeline-item::after {
-    content: '';
-    position: absolute;
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     width: 100%;
-    height: 2px;
-    background-color: var(--main-color);
-    top: 50%;
-    left: -50%;
-    transform: translateY(-50%);
-    z-index: -1;
-}
-
-.timeline-item:first-child::after {
-    display: none; /* No line before the first item */
-}
-
-.timeline-item:last-child::after {
-    display: none; /* No line after the last item */
-}
-
-/* Media Queries for Tablets */
-@media (max-width: 768px) {
-    .timeline {
-        flex-direction: column;
-        width: 90%;
-    }
-
-    .timeline-item {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .timeline-item::before {
-        height: 2px;
-        width: 100%;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .timeline-item::after {
-        display: none;
-    }
-
-    .timeline-content {
-        margin-top: 0;
-    }
-}
-
-/* Media Queries for Mobile Screens */
-@media (max-width: 480px) {
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .academic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .academic-card h3 {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    margin-bottom: 10px;
+  }
+  
+  .academic-card .year {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .academic-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
     .section-title {
-        font-size: 2rem;
-        margin-bottom: 30px;
+      font-size: 2.4rem;
     }
-
-    .timeline {
-        width: 95%;
+  
+    .academic-card {
+      width: 100%;
+      max-width: 90%;
     }
-
-    .timeline-item {
-        margin-bottom: 20px;
-    }
-
-    .timeline-content {
-        padding: 10px;
-    }
-
-    .timeline-content .date {
-        font-size: 0.8rem;
-        padding: 4px 8px;
-    }
-
-    .timeline-content h3 {
-        font-size: 1rem;
-    }
-
-    .timeline-content p {
-        font-size: 0.8rem;
-    }
-
-    .timeline-icon {
-        width: 30px;
-        height: 30px;
-        margin-bottom: 10px;
-    }
-
-    .timeline-item::before {
-        height: 2px;
-        width: 100%;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-    }
-}
-
+  }
 
 
 
